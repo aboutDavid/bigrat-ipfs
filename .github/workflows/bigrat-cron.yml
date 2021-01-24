@@ -11,6 +11,6 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: "12.x"
-      - run: https://github.com/bigratmonster/bigrat.monster.git verybigrat
+      - run: git clone https://github.com/bigratmonster/bigrat.monster.git verybigrat
       - run: npx ipfs-deploy verybigrat
       - run: rm -r verybigrat
