@@ -1,0 +1,13 @@
+name: bigrat
+on: [push]
+jobs:
+  gitme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+      - run: https://github.com/bigratmonster/bigrat.monster.git verybigrat
+      - run: npx ipfs-deploy verybigrat
+      - run: rm -r verybigrat
